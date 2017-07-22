@@ -11,7 +11,6 @@ order to raise an alarm in case the log forwarding should fail.
 
 There are a couple of optional variables with default values.
 
-|----------|---------|-------------|
 | Variable | Default | Description |
 |----------|---------|-------------|
 | LOGSPOUT_BEAT_LEVEL | 10 | Bunyan log level for output. |
