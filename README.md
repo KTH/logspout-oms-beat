@@ -2,7 +2,7 @@
 
 A tiny helper docker image which outputs Bunyan formatted log messages, beats, 
 at a given interval. It is used to generate information in order to monitor that
-the log system is working properly.
+the log system is working properly. The image is tiny, slightly more than 2Mb.
 
 I.e. the logs from this container is monitored from OMS with an alert in 
 order to raise an alarm in case the log forwarding should fail.
