@@ -17,3 +17,12 @@ There are a couple of optional variables with default values.
 | LOGSPOUT_BEAT_LEVEL | 10 | Bunyan log level for output. |
 | LOGSPOUT_BEAT_TIME | 60s | A Golang time Duration string for time between beats.|
 
+## Development
+
+This is a really tiny program and not much is expected to change. There is a 
+build.sh script to help with compilation of the statically linked binary and
+docker image. The options are passed to docker build. Hence,
+`./build.sh -t mymage`
+will build a docker image with tag myimage.
+
+Run it with `docker run myimage`.
