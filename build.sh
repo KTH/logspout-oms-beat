@@ -4,7 +4,7 @@
 # Options are passed as options to the docker build command.
 #
 set -ex
-rm beat
+rm -f beat
 CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o beat .
 
 docker build $* .
