@@ -32,14 +32,6 @@ import (
 	"time"
 )
 
-func getenvOrDefault(key string, defaultVal string) string {
-	value, found := os.LookupEnv(key)
-	if found {
-		return value
-	}
-	return defaultVal
-}
-
 func main() {
 	level, err := strconv.Atoi(os.Getenv("LOGSPOUT_BEAT_LEVEL"))
 	if err != nil {
