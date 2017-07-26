@@ -16,6 +16,23 @@ There are a couple of optional variables with default values.
 | LOGSPOUT_BEAT_LEVEL | 10 | Bunyan log level for output. |
 | LOGSPOUT_BEAT_TIME | 60s | A Golang time Duration string for time between beats.|
 
+## Running
+
+Pre built images are available on docker hub as kthse/logspout-oms-beat.
+They can be started as simply as: `docker run kthse/logspout-oms-beat:latest`.
+
+In order to run as a supplement to logspout-oms, you most likely want to run
+this as a global swarm service, like logspout-oms. Something like:
+
+```
+docker service create \
+  --mode global \
+  --restart-condition any \
+  --restart-max-attempts 10 \
+  --name="logspout-beat" \
+  kthse/logspout-oms-beat:latest
+```
+
 ## Development
 
 This is a really tiny program and not much is expected to change. There is a 
